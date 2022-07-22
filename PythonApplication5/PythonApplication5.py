@@ -2,14 +2,24 @@
 
 
 def solve_quadratic(a: float, b: float, c: float):
-    discr = b ** 2 - 4 * a * c
+    math.discr = b ** 2 - 4 * a * c
 
-    if discr > 0:
-        x1 = (-b + discr ** 0.5) / (2 * a)
-        x2 = (-b - discr ** 0.5) / (2 * a)
+    if math.discr > 0:
+        x1 = (-b + math.discr ** 0.5) // (2 * a )
+        x2 = (-b - math.discr ** 0.5) // (2 * a )
         return (x1, x2)
-    elif discr == 0:
-        x1 = -b / (2 * a)
+    elif a == 0:
+        try:
+            a = 2/0
+        except Exception:
+            print('Error_1')
+    elif math.discr == 0:
+        x1 = -b // (2 * a)
         return (x1, x1)
+    elif a == 0:
+        try:
+            a = 2/0
+        except Exception:
+            print('Error_2')
     else:
         return None
